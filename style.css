@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+body {
+    background-color: #121212;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    height: 100vh;
+    color: gainsboro;
+    z-index: 9999;
+    font-size: 45px;
+}
+
+.arrow svg {
+   margin-top: 100px;
+}
+
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bio {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    color: gainsboro;
+    height: 80vh;
+    max-width: 420px;
+    text-align: center;
+    
+}
+
+.bio h2 {
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+.bio p {
+    font-size: 17px;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+.bio a {
+    text-decoration: none;
+    color: gainsboro;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    font-size: 24px;
+    transition: all ease-in;
+}
+
+.bio a:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1.0);
+}
+
+.socials {
+    padding: 5px;
+    width: 100%;
+}
+
+.socials svg {
+    margin: 10px;
+}
+
+.project {
+    height: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: gainsboro;
+}
+
+.project h2 {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.links ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.links ul a {
+    text-decoration: none;
+    color: gainsboro;
+    margin-bottom: 10px;
+}
+
+.links ul a:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1.0);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+    color: gainsboro;
+}
+
+footer a {
+    text-decoration: none;
+    color: gainsboro;
+}
+
