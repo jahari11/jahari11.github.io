@@ -124,6 +124,10 @@ footer {
     color: gainsboro;
 }
 
+.footer-email {
+    text-align: center;
+}
+
 footer a {
     text-decoration: none;
     color: gainsboro;
