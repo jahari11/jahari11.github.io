@@ -22,7 +22,11 @@ body {
     height: 100vh;
     color: gainsboro;
     z-index: 9999;
-    font-size: 45px;
+    font-size: 35px;
+}
+
+.arrow a {
+    color: white;
 }
 
 .arrow svg {
@@ -39,7 +43,7 @@ body {
     overflow: hidden;
 }
 
-.bio {
+#bio {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -53,18 +57,18 @@ body {
     
 }
 
-.bio h2 {
+#bio h2 {
     margin-bottom: 10px;
     font-size: 40px;
 }
 
-.bio p {
+#bio p {
     font-size: 17px;
     line-height: 24px;
     margin-bottom: 10px;
 }
 
-.bio a {
+#bio a {
     text-decoration: none;
     color: gainsboro;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
@@ -72,7 +76,7 @@ body {
     transition: all ease-in;
 }
 
-.bio a:hover {
+#bio a:hover {
     text-shadow: 0 0 10px rgba(255, 255, 255, 1.0);
 }
 
@@ -100,11 +104,13 @@ body {
 .project h2 {
     font-size: 40px;
     margin-bottom: 5px;
+    text-align: center;
 }
 
 .links ul {
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
 .links ul a {
