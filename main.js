@@ -1,3 +1,85 @@
+//Cursor animations
+
+let mouseCursor = document.querySelector(".cursor");
+let links = document.querySelectorAll("a");
+
+window.addEventListener("mousemove", cursor);
+
+function cursor(e) {
+  gsap.to(mouseCursor, 0.4, {
+    x:e.clientX,
+    y:e.clientY
+  });
+}
+
+links.forEach(link => {
+  link.addEventListener("mouseover", ()=> {
+    mouseCursor.classList.add("scale-cursor");
+    gsap.to(mouseCursor, 0.4, {
+      scale:2
+    });
+  });
+
+  link.addEventListener("mouseleave", ()=> {
+    mouseCursor.classList.add("scale-cursor");
+    gsap.to(mouseCursor, 0.4, {
+      scale:1
+    });
+  });
+});
+
+
+// Typing Effect 
+
+const typedTxt = document.querySelector(".typed-txt");
+const cursorSpan = document.querySelector(".cursor-space");
+
+const typedArray = ["my name is Jahari!"];
+const typingDelay = 200;
+const erasingDelay = 100;
+const newTxtDelay = 2000;
+let txtArrayIndex = 0;
+let charIndex = 0;
+
+function type() {
+  if(charIndex < typedArray[txtArrayIndex].length) {
+    if(!cursorSpan.classList.contains("typing"))
+    cursorSpan.classList.add("typing");
+    typedTxt.textContent += typedArray[txtArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  }
+  else {
+    cursorSpan.classList.remove("typing");
+    setTimeout(erase, newTxtDelay);
+  }
+}
+
+function erase () {
+  if (charIndex > 0) {
+    if (!cursorSpan.classList.contains("typing"))
+    cursorSpan.classList.add("typing");
+    typedTxt.textContent = typedArray[txtArrayIndex].substring(0, charIndex-1);
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  }
+  else {
+    cursorSpan.classList.remove("typing");
+    txtArrayIndex++;
+    if(txtArrayIndex >=typedArray.length) txtArrayIndex=0;
+    setTimeout(type, typingDelay + 1100);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+  if(typedArray.length) setTimeout(type, newTxtDelay + 250);
+});
+
+
+
+
+
+
 /* ---- particles.js config ---- */
 
 particlesJS("background", {

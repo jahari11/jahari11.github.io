@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
+    
 
 }
 
@@ -18,20 +19,34 @@ body {
     align-items: center;
     text-align: center;
     flex-direction: column;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     height: 100vh;
     color: gainsboro;
     z-index: 9999;
     font-size: 35px;
 }
 
-.arrow a {
-    color: white;
+.arrow {
+    position: absolute;
+    animation: shake 2s infinite;
+    top: 90%;
+    transform: translateY(50%)
+    
 }
 
-.arrow svg {
-   margin-top: 100px;
+@keyframes shake {
+    5% {transform: rotate(10deg);}
+    10% {transform: rotate(-10deg);}
+    15% {transform: rotate(10deg);}
+    20% {transform: rotate(0deg);}
 }
+
+.arrow a {
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    font-size: 40px;
+    
+}
+
 
 #background {
     position: absolute;
@@ -52,7 +67,6 @@ body {
     justify-content: center;
     color: gainsboro;
     height: 80vh;
-    max-width: 420px;
     text-align: center;
     
 }
@@ -60,20 +74,29 @@ body {
 #bio h2 {
     margin-bottom: 10px;
     font-size: 40px;
+    padding: 0px 20px;
+    margin: 0px 15px 10px;
+}
+
+#bio h2 span {
+    color: #47A6FF;
 }
 
 #bio p {
-    font-size: 17px;
-    line-height: 24px;
+    font-size: 28px;
+    line-height: 30px;
     margin-bottom: 10px;
+    padding: 0px 20px;
+    margin: 0px 10px;
 }
 
 #bio a {
     text-decoration: none;
-    color: gainsboro;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-    font-size: 24px;
+    color: #47A6FF;
+    font-size: 25px;
     transition: all ease-in;
+    font-weight: 800;
+    margin-top: 20px;    
 }
 
 #bio a:hover {
@@ -87,6 +110,7 @@ body {
 
 .socials svg {
     margin: 10px;
+    color: gainsboro;
 }
 
 .project {
@@ -115,7 +139,7 @@ body {
 
 .links ul a {
     text-decoration: none;
-    color: gainsboro;
+    color: #47A6FF;
     margin-bottom: 10px;
 }
 
@@ -127,7 +151,7 @@ footer {
     display: flex;
     justify-content: center;
     padding-bottom: 15px;
-    color: gainsboro;
+    color: #47A6FF;
 }
 
 .footer-email {
@@ -139,3 +163,40 @@ footer a {
     color: gainsboro;
 }
 
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid gainsboro;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform-origin: 100% 100%;
+    transform: translate(-50%,-50%);
+    mix-blend-mode: difference;
+}
+
+.scale-cursor {
+    background: #47A6FF;
+}
+
+
+.typed-txt {
+    
+    color: #47A6FF;
+}
+
+.cursor-space {
+    display: inline-block;
+    background-color: #dcdcdc;
+    margin-left: 2px;
+    width: 3px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%  { background-color: #dcdcdc; }
+  49% { background-color: #dcdcdc; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #dcdcdc; }
+}
