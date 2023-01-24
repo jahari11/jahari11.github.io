@@ -23,6 +23,7 @@ body {
     color: gainsboro;
     z-index: 9999;
     font-size: 35px;
+    margin: 0px 15px;
 }
 
 nav {
