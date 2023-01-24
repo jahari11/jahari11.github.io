@@ -25,6 +25,36 @@ body {
     font-size: 35px;
 }
 
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+    margin: 0px 12px;
+    width: 100%;
+    
+}
+
+.nav-links {
+    margin-right: 20px;
+}
+
+.nav-links a{
+    margin-right: 18px;
+    text-decoration: none;
+    color: #dcdcdc;
+}
+
+.nav-links a:hover{
+    color: #47A6FF;
+}
+
+.logo img{
+    width: 50px;
+} 
+
+
+
 .arrow {
     position: absolute;
     animation: shake 2s infinite;
@@ -65,7 +95,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
-    color: gainsboro;
+    color: rgb(220, 220, 220);
     height: 80vh;
     text-align: center;
     
