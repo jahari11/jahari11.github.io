@@ -9,9 +9,19 @@
 
 }
 
+html {
+    scroll-behavior: smooth;   
+}
+
 body {
     background-color: #121212;
     overflow-x: hidden;
+}
+
+.container {
+    max-width: 1240px;
+    margin: auto;
+    padding: 0 8px;
 }
 
 .title {
@@ -166,10 +176,18 @@ nav {
     text-align: center;
 }
 
-.links ul {
+.links {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    
+}
+
+.links .right-link, .left-link {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 0 1rem;
 }
 
 .links ul a {
