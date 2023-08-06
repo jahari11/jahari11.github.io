@@ -618,3 +618,20 @@ input:focus {
 .next p {
     text-align: right;
 }
+
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid grey;
+    transform-origin: center center;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 1000;
+    mix-blend-mode: difference;
+}
+
+.scale-cursor {
+    background: white;
+}

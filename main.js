@@ -64,3 +64,32 @@ const urlLocationHandler = async () => {
 
 };
 
+
+let mouseCursor = document.querySelector('.cursor');
+let links = document.querySelectorAll('a')
+
+
+window.addEventListener("mousemove", cursor);
+
+function cursor(e) {
+    gsap.to(mouseCursor, 0.4, {
+        x:e.clientX,
+        y:e.clientY
+    });
+}
+
+links.forEach(link => {
+    link.addEventListener("mouseover", ()=> {
+        mouseCursor.classList.add("scale-cursor");
+        gsap.to(mouseCursor, 0.4, {
+            scale:2
+        });
+    });
+
+    link.addEventListener("mouseleave",()=> {
+        mouseCursor.classList.add("scale-cursor");
+        gsap.to(mouseCursor, 0.4, {
+            scale:1
+        });
+    });
+});
