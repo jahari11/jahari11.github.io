@@ -312,7 +312,7 @@ h6 {
 }
 
 .project1 {
-    background: url(img/Best\ Eats.png) no-repeat;
+    background: url(img/Ingenious.png) no-repeat;
     background-size: cover;
     object-fit: contain;
     cursor: pointer;
@@ -320,10 +320,10 @@ h6 {
 }
 
 .project1::after {
-    content: "Best Eats";
+    content: "Ingenious Dealers";
     font-size: 3rem;
     position: relative;
-    color: white;
+    color: #999;
     display: block;
     top: 8%;
     left: -50%;
@@ -343,13 +343,13 @@ h6 {
 }
 
 .project2 {
-    background: url(img/Namaste.png) no-repeat 50% 50%;
+    background: url(img/YLSN.png) no-repeat 50% 50%;
     background-size: cover;
     cursor: pointer;
 }
 
 .project2::after {
-    content: "Namaste";
+    content: "Youth Life Support Network";
     font-size: 3rem;
     position: relative;
     color: grey;
@@ -367,16 +367,16 @@ h6 {
 }
 
 .project3 {
-    background: url(img/Asteroids.png) no-repeat 50% 50%;
+    background: url(img//Afri\ Body\ Care.png) no-repeat 50% 50%;
     background-size: cover;
     cursor: pointer;
 }
 
 .project3::after {
-    content: "Asteroids";
+    content: "Afri Body Care";
     font-size: 3rem;
     position: relative;
-    color: white;
+    color: #999;
     display: block;
     top: 80%;
     left: -40%;
