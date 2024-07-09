@@ -367,13 +367,13 @@ h6 {
 }
 
 .project3 {
-    background: url(img//Afri\ Body\ Care.png) no-repeat 50% 50%;
+    background: url(img/Playdead.png) no-repeat 50% 50%;
     background-size: cover;
     cursor: pointer;
 }
 
 .project3::after {
-    content: "Afri Body Care";
+    content: "Playdead Global";
     font-size: 3rem;
     position: relative;
     color: #999;
